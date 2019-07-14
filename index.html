@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+    series: {
+        type: 'sankey',
+        layout:'none',
+        focusNodeAdjacency: 'allEdges',
+        data: [{
+            name: '单户授信500万元以下小微企业贷款'
+        }, {
+            name: '个体工商户和小微企业主经营性贷款'
+        }, {
+            name: '中资大型银行'
+        }, {
+            name: '中资中型银行'
+        }, {
+            name: '中资小型银行'
+        }, {
+            name: '小型城商行'
+        },{
+            name: '农村商业银行'
+        }, {
+            name: '农村合作银行'
+        }, {
+            name: '村镇银行'
+        }, {
+            name: '农村信用合作社'
+        }, {
+            name: '中资财务公司'
+        }, {
+            name: '外资金融机构'
+        }, {
+            name: '银行业非存款类金融机构'
+        }],
+        links: [{
+            target: '单户授信500万元以下小微企业贷款',
+            source: '中资大型银行',
+            value: 6339
+        }, {
+            target: '单户授信500万元以下小微企业贷款',
+            source: '中资中型银行',
+            value: 1181
+        }, {
+            target: '单户授信500万元以下小微企业贷款',
+            source: '中资小型银行',
+            value:9586
+        }, {
+            target: '单户授信500万元以下小微企业贷款',
+            source: '小型城商行',
+            value:2829
+        }, {
+            target: '单户授信500万元以下小微企业贷款',
+            source: '农村商业银行',
+            value: 4845
+        }, {
+            target: '单户授信500万元以下小微企业贷款',
+            source: '农村合作银行',
+            value: 36
+       }, {
+            target: '单户授信500万元以下小微企业贷款',
+            source: '村镇银行',
+            value: 1481
+        }, {
+            target: '单户授信500万元以下小微企业贷款',
+            source: '农村信用合作社',
+            value:810
+        }, {
+            target: '单户授信500万元以下小微企业贷款',
+            source: '中资财务公司',
+            value:43
+        }, {
+            target: '单户授信500万元以下小微企业贷款',
+            source: '外资金融机构',
+            value:72
+        }, {
+            target: '单户授信500万元以下小微企业贷款',
+            source: '银行业非存款类金融机构',
+            value: 302
+        }, {
+            target: '个体工商户和小微企业主经营性贷款',
+            source: '中资大型银行',
+            value: 12295
+        }, {
+            target: '个体工商户和小微企业主经营性贷款',
+            source: '中资中型银行',
+            value: 14808
+        }, {
+            target: '个体工商户和小微企业主经营性贷款',
+            source: '中资小型银行',
+            value:30502
+        }, {
+            target: '个体工商户和小微企业主经营性贷款',
+            source: '小型城商行',
+            value:7993
+        }, {
+            target: '个体工商户和小微企业主经营性贷款',
+            source: '农村商业银行',
+            value: 17194
+        }, {
+            target: '个体工商户和小微企业主经营性贷款',
+            source: '农村合作银行',
+            value:266
+       }, {
+            target: '个体工商户和小微企业主经营性贷款',
+            source: '村镇银行',
+            value: 3590
+        }, {
+            target: '个体工商户和小微企业主经营性贷款',
+            source: '农村信用合作社',
+            value:3716
+        }, {
+            target: '个体工商户和小微企业主经营性贷款',
+            source: '中资财务公司',
+            value:9
+        }, {
+            target: '个体工商户和小微企业主经营性贷款',
+            source: '外资金融机构',
+            value:46
+        }, {
+            target: '个体工商户和小微企业主经营性贷款',
+            source: '银行业非存款类金融机构',
+            value: 217
+        }]
+    }
+};
+
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>
